@@ -132,10 +132,9 @@ function getProficiencyColor(level: string): string {
   }
 }
 
-// Skill data interface
 interface Skill {
   name: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode; // ✅ make optional here only
   level: string;
   year: string;
   description: string;
@@ -187,7 +186,6 @@ export default function SkillsPage() {
       },
       { 
         name: "Motiff", 
-        // icon: <SiMotiff/>, 
         level: "Advanced", 
         year: "2025", 
         description: "Learned During The Training Period of The UI/UX Design Course.",
@@ -204,8 +202,7 @@ export default function SkillsPage() {
     ],
     UIUX: [
       { 
-        name: "Wireframing", 
-        // icon: </>, 
+        name: "Wireframing",
         level: "Advanced", 
         year: "2025", 
         description: "Self-taught in 2025, currently learning through projects.",
@@ -213,7 +210,6 @@ export default function SkillsPage() {
       },
       { 
         name: "Prototyping", 
-        // icon: <SiDjango />, 
         level: "Advanced", 
         year: "2025", 
         description: "Learned during 7th semester in 2024, used for web apps and admin dashboards.",
